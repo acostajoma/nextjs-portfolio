@@ -1,5 +1,9 @@
 'use client'
 
+import clsx from 'clsx'
+import { MotionConfig, motion, useReducedMotion } from 'framer-motion'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   createContext,
   useContext,
@@ -8,17 +12,13 @@ import {
   useRef,
   useState,
 } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
+import { Languages } from '@/components/Languages'
 import { Logo, Logomark } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
 const RootLayoutContext = createContext<{
@@ -66,6 +66,7 @@ function Header({
         <Link
           href="/"
           aria-label="Home"
+          className="flex"
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
@@ -75,14 +76,14 @@ function Header({
             filled={logoHovered}
           />
           <Logo
-            className="hidden h-8 sm:block"
+            className="mr-2 hidden h-8 w-8 sm:block"
             invert={invert}
             filled={logoHovered}
           />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Contact us
+            Contact me
           </Button>
           <button
             ref={toggleRef}
@@ -144,7 +145,7 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/about">About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
@@ -235,14 +236,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                     <h2 className="font-display text-base font-semibold text-white">
                       Our offices
                     </h2>
-                    <Offices
+                    <Languages
                       invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
+                      Follow me
                     </h2>
                     <SocialMedia className="mt-6" invert />
                   </div>

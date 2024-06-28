@@ -1,19 +1,19 @@
 import { type Metadata } from 'next'
 
-import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
-import { List, ListItem } from '@/components/List'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
+import hosting from '@/images/hosting.jpg'
 import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
-import imageWhiteboard from '@/images/whiteboard.jpg'
+import optimization from '@/images/optimization.jpg'
+import performance from '@/images/performance.jpg'
+import whiteboard from '@/images/whiteboard.jpg'
 
 function Section({
   title,
@@ -53,133 +53,129 @@ function Section({
   )
 }
 
-function Discover() {
+function CustomWebsite() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Custom Website Development" image={{ src: imageLaptop }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          I specialize in creating fully customized websites tailored to your
+          unique needs. From the initial concept to the final launch, I work
+          closely with you to ensure that your vision is brought to life.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
-        </p>
-        <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          Whether you need a simple informational site or a complex web
+          application, I use the latest technologies and best practices to
+          deliver a robust and scalable solution that aligns perfectly with your
+          brand and business goals.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        My prefered technologies for projects
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>Svelte</TagListItem>
+        <TagListItem>React</TagListItem>
+        <TagListItem>Mongodb</TagListItem>
+        <TagListItem>Postgre</TagListItem>
+        <TagListItem>Prisma</TagListItem>
+        <TagListItem>TailwindCSS</TagListItem>
       </TagList>
     </Section>
   )
 }
 
-function Build() {
+function Performance() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section
+      title="Performance Optimization"
+      image={{ src: performance, shape: 2 }}
+    >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          A fast and efficient website is essential for a positive user
+          experience and higher search engine rankings. I focus on optimizing
+          your website&apos;s performance by minimizing load times, optimizing
+          images, leveraging browser caching, and improving server response
+          times.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
-        </p>
-        <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          These enhancements not only provide a smoother experience for your
+          users but also contribute to better search engine performance and
+          increased user satisfaction.
         </p>
       </div>
-
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
-        className="mt-12"
-      >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
     </Section>
   )
 }
 
-function Deliver() {
+function Maintenance() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section
+      title="Maintenance and Support"
+      image={{ src: optimization, shape: 1 }}
+    >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          Keeping your website up-to-date and running smoothly is vital for its
+          success. I offer ongoing maintenance and support services to ensure
+          your site remains secure, functional, and up-to-date with the latest
+          technologies.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
-        </p>
-        <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+          From regular updates and backups to troubleshooting and performance
+          monitoring, I provide comprehensive support to address any issues
+          promptly, giving you peace of mind and allowing you to focus on your
+          business
         </p>
       </div>
+    </Section>
+  )
+}
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
-      </h3>
-      <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
-        </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
-        </ListItem>
-      </List>
+function Hosting() {
+  return (
+    <Section title="Hosting and Deployment" image={{ src: hosting, shape: 2 }}>
+      <div className="space-y-6 text-base text-neutral-600">
+        <p>
+          I offer reliable hosting solutions and handle the entire deployment
+          process to ensure your website is accessible to users around the
+          world.
+        </p>
+        <p>
+          Using top cloud platforms like AWS, Google Cloud, Vercel, or
+          Cloudflare, I ensure that your site is hosted on a secure and scalable
+          infrastructure.
+        </p>
+        <p>
+          I take care of the technical aspects of deployment, including setting
+          up servers, configuring DNS, and implementing security measures,
+          ensuring a seamless launch and optimal performance.
+        </p>
+      </div>
+    </Section>
+  )
+}
+
+function Training() {
+  return (
+    <Section
+      title="Training and Consultation"
+      image={{ src: whiteboard, shape: 1 }}
+    >
+      <div className="space-y-6 text-base text-neutral-600">
+        <p>
+          Empowering you to manage and update your website independently is a
+          key part of my service. I provide personalized training sessions to
+          guide you through the essential functions of your website, ensuring
+          you feel confident in making updates and changes as needed.
+        </p>
+        <p>
+          Additionally, I offer consultation services to advise you on best
+          practices, digital strategies, and the latest web technologies,
+          helping you to continuously improve and evolve your online presence.
+        </p>
+      </div>
     </Section>
   )
 }
@@ -195,43 +191,41 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="My Values"
+        title="Commitment to Excellence and Innovation"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          I strive to stay at the forefront of emerging trends and technologies
+          while maintaining a strong foundation in proven methodologies. My core
+          values guide every project to ensure quality and client satisfaction.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
           <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+            I pay attention to every detail to ensure the highest quality
+            results, from initial planning to final deployment.
           </GridListItem>
           <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+            I pride myself on delivering projects on time without compromising
+            on quality, using streamlined processes and best practices.
           </GridListItem>
           <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+            I tailor solutions to meet the unique needs of each client and
+            project, ensuring flexibility and responsiveness.
           </GridListItem>
           <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+            I maintain transparency and integrity in all communications and
+            processes, fostering trust and reliability.
           </GridListItem>
           <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+            I build long-term relationships with clients based on trust and
+            mutual respect, aiming for ongoing collaboration and support.
           </GridListItem>
           <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+            I continuously seek out new technologies and methodologies to
+            enhance my services and deliver cutting-edge solutions.
           </GridListItem>
         </GridList>
       </Container>
@@ -240,26 +234,28 @@ function Values() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Process',
+  title: 'My Services',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'I focus on efficiency and innovation to deliver top-notch web solutions. My process ensures that each project is tailored to meet client needs and achieve their goals.',
 }
 
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="My Services" title="How Can I Help You">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          I focus on efficiency and innovation to deliver top-notch web
+          solutions. My process ensures that each project is tailored to meet
+          client needs and achieve their goals.
         </p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
-        <Build />
-        <Deliver />
+        <CustomWebsite />
+        <Performance />
+        <Maintenance />
+        <Hosting />
+        <Training />
       </div>
 
       <Values />

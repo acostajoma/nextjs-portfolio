@@ -16,13 +16,13 @@ import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import svelte from '@/images/stack/svelte/logo-light.svg'
+import { loadCaseStudies, type CaseStudy, type MDXEntry } from '@/lib/mdx'
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
+  ['Svelte', svelte],
   ['Family Fund', logoFamilyFund],
   ['Unseal', logoUnseal],
   ['Mail Smirk', logoMailSmirk],
@@ -38,7 +38,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            My tech stack
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -50,7 +50,12 @@ function Clients() {
             {clients.map(([client, logo]) => (
               <li key={client}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <div className="flex flex-row items-center">
+                    <Image src={logo} alt={client} unoptimized />
+                    <p className="font-display text-sm font-semibold tracking-wider text-white">
+                      {client}
+                    </p>
+                  </div>
                 </FadeIn>
               </li>
             ))}
@@ -69,13 +74,14 @@ function CaseStudies({
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Crafting Digital Experiences"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          Dive into my portfolio to see how I transform ideas into engaging web
+          solutions. Each project highlights my expertise in design,
+          development, and technology, showcasing my dedication to delivering
+          digital experiences. Explore the work that defines my passion.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -185,12 +191,13 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Innovative Web Developer From Costa Rica
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            I create innovative web solutions blending design and technology.
+            Specializing in Svelte and React. I aim to deliver seamless and
+            efficient digital experiences. Let&apos;s turn your vision into
+            reality.
           </p>
         </FadeIn>
       </Container>

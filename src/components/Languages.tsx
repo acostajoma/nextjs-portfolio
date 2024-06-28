@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-function Office({
+function Language({
   name,
   children,
   invert = false,
@@ -25,25 +25,21 @@ function Office({
   )
 }
 
-export function Offices({
+export function Languages({
   invert = false,
   ...props
 }: React.ComponentPropsWithoutRef<'ul'> & { invert?: boolean }) {
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Copenhagen" invert={invert}>
-          1 Carlsberg Gate
-          <br />
-          1260, København, Denmark
-        </Office>
+        <Language name="Spanish" invert={invert}>
+          Native
+        </Language>
       </li>
       <li>
-        <Office name="Billund" invert={invert}>
-          24 Lego Allé
-          <br />
-          7190, Billund, Denmark
-        </Office>
+        <Language name="English" invert={invert}>
+          Bilingual (C1)
+        </Language>
       </li>
     </ul>
   )

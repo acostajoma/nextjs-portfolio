@@ -1,12 +1,12 @@
-import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
+import { useId } from 'react'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
+import { Languages } from '@/components/Languages'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 
@@ -104,7 +104,7 @@ function ContactDetails() {
         addresses here for legal reasons.
       </p>
 
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
+      <Languages className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
@@ -132,7 +132,7 @@ function ContactDetails() {
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
+          Follow me
         </h2>
         <SocialMedia className="mt-6" />
       </Border>
@@ -148,7 +148,7 @@ export const metadata: Metadata = {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
+      <PageIntro eyebrow="Contact me" title="Let’s work together">
         <p>We can’t wait to hear from you.</p>
       </PageIntro>
 

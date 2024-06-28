@@ -28,7 +28,7 @@ const navigation = [
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
       { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Contact me', href: '/contact' },
     ],
   },
   {

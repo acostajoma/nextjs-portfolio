@@ -15,6 +15,8 @@
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
+    "@prisma/client": "^5.16.1",
+    "@prisma/extension-accelerate": "^1.1.0",
     "@types/mdx": "^2.0.7",
     "@types/node": "^20.10.8",
     "@types/react": "^18.2.47",
@@ -36,7 +38,8 @@
     "shiki": "^0.11.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
-    "unified-conditional": "0.0.2"
+    "unified-conditional": "0.0.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "1",
@@ -44,6 +47,7 @@
     "eslint-config-next": "^14.0.4",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
+    "prisma": "^5.16.1",
     "sharp": "0.33.1"
   }
 }

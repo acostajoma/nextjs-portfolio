@@ -19,17 +19,15 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import svelte from '@/images/stack/svelte/logo-light.svg'
+import react from '@/images/stack/react/logo-light.svg'
+import mongodb from '@/images/stack/mongodb/logo-light.svg'
 import { loadCaseStudies, type CaseStudy, type MDXEntry } from '@/lib/mdx'
 
 const clients = [
   ['Svelte', svelte],
-  ['Family Fund', logoFamilyFund],
+  ['React', react],
+  ['Mongo DB', mongodb],
   ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
 ]
 
 function Clients() {
@@ -52,7 +50,7 @@ function Clients() {
                 <FadeIn>
                   <div className="flex flex-row items-center">
                     <Image src={logo} alt={client} unoptimized />
-                    <p className="font-display text-sm font-semibold tracking-wider text-white">
+                    <p className="ml-3 font-display text-sm font-semibold tracking-wider text-white">
                       {client}
                     </p>
                   </div>
@@ -132,7 +130,7 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="I help you identify, explore and respond to new opportunities."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>

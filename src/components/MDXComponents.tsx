@@ -21,13 +21,13 @@ export const MDXComponents = {
       <div
         className={clsx(
           'group isolate my-10 overflow-hidden rounded-4xl bg-neutral-100 max-sm:-mx-6',
-          className,
+          className
         )}
       >
         <GrayscaleTransitionImage
           {...props}
-          sizes="(min-width: 768px) 42rem, 100vw"
-          className="aspect-[16/10] w-full object-cover"
+          sizes='(min-width: 768px) 42rem, 100vw'
+          className='aspect-[16/10] w-full object-cover'
         />
       </div>
     )
@@ -49,10 +49,10 @@ export const MDXComponents = {
       <div
         className={clsx(
           'my-10 max-sm:-mx-6 max-sm:flex max-sm:overflow-x-auto',
-          className,
+          className
         )}
       >
-        <div className="max-sm:min-w-full max-sm:flex-none max-sm:px-6">
+        <div className='max-sm:min-w-full max-sm:flex-none max-sm:px-6'>
           <table {...props} />
         </div>
       </div>
@@ -73,11 +73,11 @@ export const MDXComponents = {
     className?: string
   }) {
     return (
-      <Border position="left" className={clsx('my-10 pl-8', className)}>
-        <p className="font-display text-sm font-bold uppercase tracking-widest text-neutral-950">
+      <Border position='left' className={clsx('my-10 pl-8', className)}>
+        <p className='font-display text-sm font-bold uppercase tracking-widest text-neutral-950'>
           Top tip
         </p>
-        <div className="mt-4">{children}</div>
+        <div className='mt-4'>{children}</div>
       </Border>
     )
   },
@@ -89,7 +89,7 @@ export const MDXComponents = {
       <div
         className={clsx(
           '[&>*]:mx-auto [&>*]:max-w-3xl [&>:first-child]:!mt-0 [&>:last-child]:!mb-0',
-          className,
+          className
         )}
         {...props}
       />

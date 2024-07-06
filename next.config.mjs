@@ -20,7 +20,7 @@ function remarkMDXLayout(source, metaName) {
   let parser = Parser.extend(jsx())
   let parseOptions = { ecmaVersion: 'latest', sourceType: 'module' }
 
-  return (tree) => {
+  return tree => {
     let imp = `import _Layout from '${source}'`
     let exp = `export default function Layout(props) {
       return <_Layout {...props} ${metaName}={${metaName}} />
@@ -36,7 +36,7 @@ function remarkMDXLayout(source, metaName) {
         type: 'mdxjsEsm',
         value: exp,
         data: { estree: parser.parse(exp, parseOptions) },
-      },
+      }
     )
   }
 }

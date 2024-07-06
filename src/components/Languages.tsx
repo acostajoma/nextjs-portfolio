@@ -13,7 +13,7 @@ function Language({
     <address
       className={clsx(
         'text-sm not-italic',
-        invert ? 'text-neutral-300' : 'text-neutral-600',
+        invert ? 'text-neutral-300' : 'text-neutral-600'
       )}
     >
       <strong className={invert ? 'text-white' : 'text-neutral-950'}>
@@ -30,14 +30,14 @@ export function Languages({
   ...props
 }: React.ComponentPropsWithoutRef<'ul'> & { invert?: boolean }) {
   return (
-    <ul role="list" {...props}>
+    <ul role='list' {...props}>
       <li>
-        <Language name="Spanish" invert={invert}>
+        <Language name='Spanish' invert={invert}>
           Native
         </Language>
       </li>
       <li>
-        <Language name="English" invert={invert}>
+        <Language name='English' invert={invert}>
           Bilingual (C1)
         </Language>
       </li>

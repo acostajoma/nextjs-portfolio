@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,md}\" && svgo -r src/images/stack"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -48,6 +49,7 @@
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "prisma": "^5.16.1",
-    "sharp": "0.33.1"
+    "sharp": "0.33.1",
+    "svgo": "^3.3.2"
   }
 }

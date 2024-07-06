@@ -3,12 +3,12 @@ import glob from 'fast-glob'
 
 async function loadEntries<T extends { date: string }>(
   directory: string,
-  metaName: string,
+  metaName: string
 ): Promise<Array<MDXEntry<T>>> {
   return (
     await Promise.all(
       (await glob('**/page.mdx', { cwd: `src/app/${directory}` })).map(
-        async (filename) => {
+        async filename => {
           let metadata = (await import(`../app/${directory}/${filename}`))[
             metaName
           ] as T
@@ -17,8 +17,8 @@ async function loadEntries<T extends { date: string }>(
             metadata,
             href: `/${directory}/${filename.replace(/\/page\.mdx$/, '')}`,
           }
-        },
-      ),
+        }
+      )
     )
   ).sort((a, b) => b.date.localeCompare(a.date))
 }

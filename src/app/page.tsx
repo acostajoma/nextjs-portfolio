@@ -191,7 +191,7 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'I create innovative web solutions blending design and technology. Specializing in Svelte and React. I aim to deliver seamless and efficient digital experiences',
 }
 
 export default async function Home() {

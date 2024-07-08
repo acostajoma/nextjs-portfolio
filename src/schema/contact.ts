@@ -6,7 +6,7 @@ export const contactSchema = z.object({
   company: z.string().min(3).max(50).trim().optional(),
   phone: z
     .string()
-    .regex(/^[0-9]{10,15}$/)
+    .regex(/^[0-9]{6,15}$/)
     .trim()
     .optional(),
   message: z.string().min(10).max(500),

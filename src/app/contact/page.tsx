@@ -9,6 +9,9 @@ import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import { ContactForm } from '@/components/ContactForm'
 
+
+export const runtime = 'edge'
+
 function RadioInput({
   label,
   ...props
@@ -24,6 +27,7 @@ function RadioInput({
     </label>
   )
 }
+
 
 function ContactDetails() {
   return (

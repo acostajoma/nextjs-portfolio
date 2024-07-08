@@ -14,6 +14,11 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['localhost:3000','macosta.dev','www.macosta.dev']
+    }
+  }
 }
 
 function remarkMDXLayout(source, metaName) {

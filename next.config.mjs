@@ -16,8 +16,8 @@ const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   experimental: {
     serverActions: {
-      allowedOrigins: ['localhost:3000','macosta.dev','www.macosta.dev']
-    }
+      allowedOrigins: ['localhost:3000','macosta.dev','www.macosta.dev', 'nextjs-portfolio-9vz.pages.dev'],
+    },
   }
 }
 

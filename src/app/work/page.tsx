@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import { Blockquote } from '@/components/Blockquote'
@@ -9,17 +9,14 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
-import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+
+import firstPortfolio from '@/images/portfolio/first/portfolio-image.webp'
+import secondPortfolio from '@/images/portfolio/second/portfolio-image.webp'
+import thirdPortfolio from '@/images/portfolio/third/portfolio-image.webp'
+
+import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 
 function CaseStudies({
   caseStudies,
@@ -30,7 +27,7 @@ function CaseStudies({
     <Container className='mt-40'>
       <FadeIn>
         <h2 className='font-display text-2xl font-semibold text-neutral-950'>
-          Case studies
+          Projects
         </h2>
       </FadeIn>
       <div className='mt-10 space-y-20 sm:space-y-24 lg:space-y-32'>
@@ -73,9 +70,9 @@ function CaseStudies({
                   <div className='mt-8 flex'>
                     <Button
                       href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
+                      aria-label={`Read about projects: ${caseStudy.client}`}
                     >
-                      Read case study
+                      Read more about the project
                     </Button>
                   </div>
                   {caseStudy.testimonial && (
@@ -96,38 +93,44 @@ function CaseStudies({
   )
 }
 
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+const portfolios : [string, StaticImageData, string, string ][] = [
+  ['First Portfolio', firstPortfolio, 'This is my first portfolio, created using pure HTML, CSS, and JavaScript during my early days of learning web development. For the contact form section, I integrated Amazon Simple Email Service (SES). Please note that the contact form in this portfolio is currently non-functional.', 'https://acostajoma.github.io/first-repository/'],
+  ['Second Portfolio', secondPortfolio, 'This is my second portfolio, developed using React. For the contact form section, I reused code from my first portfolio, which utilized Amazon Simple Email Service (SES) and AWS Lambda. Please note that the contact form in this portfolio is currently deactivated and non-functional.', 'https://f8d7c483.old-portfolio-3c8.pages.dev/'],
+  ['Third Portfolio', thirdPortfolio, 'This is my third portfolio, developed using TailwindCSS, SvelteKit, Cloudflare, and the Google API for the email form. This project was particularly enjoyable to work on, and Svelte has become my favorite JavaScript framework.', 'https://portfolio-svelte-brm.pages.dev/']
 ]
 
-function Clients() {
+
+function Portfolios() {
   return (
     <Container className='mt-24 sm:mt-32 lg:mt-40'>
       <FadeIn>
         <h2 className='font-display text-2xl font-semibold text-neutral-950'>
-          You’re in good company
+          Past Portfolios 
         </h2>
       </FadeIn>
       <FadeInStagger className='mt-10' faster>
         <Border as={FadeIn} />
         <ul
           role='list'
-          className='grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4'
+          className='grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-3'
         >
-          {clients.map(([client, logo]) => (
+          {portfolios.map(([client, logo, description, url]) => (
             <li key={client} className='group'>
+              <Link href={url} target='_blank'>
               <FadeIn className='overflow-hidden'>
                 <Border className='pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px'>
-                  <Image src={logo} alt={client} unoptimized />
+                  <GrayscaleTransitionImage
+                    src={logo}
+                    alt={client}
+                    quality={90}
+                    className='w-full rounded-xl'
+                  />
+                    <h3 className='mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8'>{client}</h3>
+                    <p className='text-sm text-neutral-950 lg:mt-2'>{description}</p>
+
                 </Border>
               </FadeIn>
+              </Link>
             </li>
           ))}
         </ul>
@@ -137,9 +140,9 @@ function Clients() {
 }
 
 export const metadata: Metadata = {
-  title: 'Our Work',
+  title: 'My Work',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'I believe in creating efficient and innovative web solutions that deliver maximum value to my clients.',
 }
 
 export default async function Work() {
@@ -148,27 +151,16 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow='Our work'
-        title='Proven solutions for real-world problems.'
+        eyebrow='My Work'
+        title='Tailored Web Solutions for Your Unique Needs'
       >
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          I believe in creating efficient and innovative web solutions that deliver maximum value to my clients. Each project is crafted with a focus on customization and quality, leveraging the latest technologies.
         </p>
       </PageIntro>
 
       <CaseStudies caseStudies={caseStudies} />
-
-      <Testimonial
-        className='mt-24 sm:mt-32 lg:mt-40'
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
-      >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
-      </Testimonial>
-
-      <Clients />
+      <Portfolios/>
 
       <ContactSection />
     </>

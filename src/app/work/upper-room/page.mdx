@@ -1,0 +1,44 @@
+import logo from '@/images/other/light/logo-dark.svg'
+import imageHero from './hero.jpg'
+
+export const caseStudy = {
+  client: 'Upper Room',
+  title: 'Brilla Musical Event',
+  description:
+    'Brilla was a Christian musical event that took place on December 9th, 2022 The goal was to bring together young people for an enjoyable time, offering them a unique experience.',
+  summary: [
+    'Brilla was a Christian musical event that took place on December 9th, 2022 The goal was to bring together young people for an enjoyable time, offering them a unique experience. The entrance and the performance area were adorned with many colorful lights to provide the audience with a unique sensory experience.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2022-06',
+  service: 'Web Development',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+Brilla was a Christian musical event held on December 9th, 2022, with the goal of bringing young people together for an enjoyable and unique experience. The event featured an entrance and performance area adorned with colorful lights, creating a distinctive sensory experience for the audience. This atmosphere was designed to make the evening memorable and engaging for all attendees. Additionally, part of the event's objective was to give Christmas gifts to children in poor conditions, adding a meaningful and charitable aspect to the celebration. I donated the website to support this noble cause, ensuring that the event's online presence was professional and impactful.
+
+The website for Brilla was developed using MarkoJS, a modern framework that enabled the creation of a dynamic and interactive user interface. AWS was utilized for image storage, specifically through S3, ensuring that all visual elements were stored securely and could be accessed efficiently. This setup allowed for a seamless presentation of event details and media, enhancing the overall user experience.
+
+Event information was managed using a NoSQL database, DynamoDB, which provided the flexibility needed to handle diverse data types and large volumes of information. Communication with the backend was facilitated through API Gateway, ensuring reliable and efficient data transfer. The entire project was designed to be fully serverless, offering scalability and cost-effectiveness while maintaining high performance and reliability.
+
+## What I did
+
+<TagList>
+  <TagListItem>MarkoJs</TagListItem>
+  <TagListItem>DynamoDB</TagListItem>
+  <TagListItem>AWS S3</TagListItem>
+  <TagListItem>API Gateway</TagListItem>
+</TagList>
+
+<StatList>
+  <StatListItem value='90' label='Website performance' />
+  <StatListItem value='150+' label='Gifts for children' />
+  <StatListItem value='40+' label='cups of coffee' />
+</StatList>

@@ -1,0 +1,45 @@
+import logo from '@/images/other/heart/logo-dark.svg'
+import imageHero from './hero.jpg'
+
+export const caseStudy = {
+  client: 'Wedding Invitation',
+  title: 'Invite your guests with a custom Website',
+  description:
+    'This project is a personalized wedding invitation website created with SvelteKit and Cloudflare. Each guest receives a unique invitation number from a Cloudflare database.',
+  summary: [
+    'This project is a personalized wedding invitation website created with SvelteKit and Cloudflare. Each guest receives a unique invitation number from a Cloudflare database. The site features a countdown timer that builds anticipation by counting down to the wedding date and then continues to count down to each anniversary, ensuring the special date is never forgotten. This dynamic, user-friendly invitation enhances the wedding experience with its personalized and interactive design.',
+  ],
+  logo,
+  image: { src: imageHero },
+  date: '2023-08',
+  service: 'Web development',
+}
+
+export const metadata = {
+  title: `${caseStudy.client} Project`,
+  description: caseStudy.description,
+}
+
+## Overview
+
+This project was created with SvelteKit and Cloudflare to serve as a dynamic, personalized wedding invitation. Each invitation is unique and tailored to the recipient, with the invitation number sourced from a Cloudflare database. The website features a countdown timer that adds a special touch to the wedding experience by keeping track of significant dates.
+
+Before the wedding, the page displays a countdown timer, building anticipation as it counts down to the big day. This feature helps keep guests excited and informed about the upcoming event. After the wedding, the countdown timer shifts focus, counting down the time remaining until the next anniversary. This functionality ensures that the couple will never forget their special day, as the page continually reminds them of their anniversary.
+
+By leveraging SvelteKit and Cloudflare, the project benefits from a fast, responsive user interface and reliable backend services. The use of Cloudflare's database for storing invitation numbers ensures that each guest receives a unique and personalized invitation. This combination of technologies provides a seamless and enjoyable experience for both the couple and their guests.
+
+## What I did
+
+<TagList>
+  <TagListItem>Database (Cloudflare)</TagListItem>
+  <TagListItem>Frontend (Svelte)</TagListItem>
+  <TagListItem>Invitation</TagListItem>
+</TagList>
+
+<StatList title='** Based on Google PageSpeed Insights'>
+  <StatListItem value='92' label='Performance' />
+  <StatListItem value='100' label='Accessibility' />
+  <StatListItem value='100' label='Best Practices' />
+  <StatListItem value='100' label='SEO' />
+  <StatListItem value='20+' label='Cups of coffee' />
+</StatList>

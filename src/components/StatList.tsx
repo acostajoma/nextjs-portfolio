@@ -2,6 +2,7 @@ import { Border } from '@/components/Border'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 
 export function StatList({
+  title = undefined,
   children,
   ...props
 }: Omit<React.ComponentPropsWithoutRef<typeof FadeInStagger>, 'children'> & {
@@ -12,6 +13,7 @@ export function StatList({
       <dl className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:auto-cols-fr lg:grid-flow-col lg:grid-cols-none'>
         {children}
       </dl>
+      <h3 className='mt-8 font-light'>{title ?? ''}</h3>
     </FadeInStagger>
   )
 }

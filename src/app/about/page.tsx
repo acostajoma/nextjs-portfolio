@@ -186,7 +186,7 @@ function Team() {
 export const metadata: Metadata = {
   title: 'About Me',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'My strength is in building strong client relationships and delivering exceptional web solutions.',
 }
 
 export default async function About() {
@@ -228,12 +228,12 @@ export default async function About() {
 
       <Expertise />
 
-      <PageLinks
+      {/* <PageLinks
         className='mt-24 sm:mt-32 lg:mt-40'
         title='From the blog'
         intro='Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design.'
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

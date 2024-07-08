@@ -9,9 +9,9 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'Rids Agency', href: '/work/rids-agency' },
+      { title: 'Wedding Page', href: '/work/wedding-page' },
+      { title: 'Brilla', href: '/work/upper-room' },
       {
         title: (
           <>
@@ -23,7 +23,7 @@ const navigation = [
     ],
   },
   {
-    title: 'Company',
+    title: 'More',
     links: [
       { title: 'About', href: '/about' },
       { title: 'Services', href: '/services' },

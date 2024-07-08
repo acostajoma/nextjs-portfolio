@@ -14,7 +14,7 @@ import { loadArticles } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    'Keep yourself informed with the latest articles, news, and tutorials in web development. Explore fresh ideas, cutting-edge technologies, and practical tips to enhance your projects and boost your skills.',
 }
 
 export default async function Blog() {
@@ -22,16 +22,15 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow='Blog' title='The latest articles and news'>
+      <PageIntro eyebrow='Blog' title='Insights and Innovations'>
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+        Keep yourself informed with the latest articles, news, and tutorials in web development. Explore fresh ideas, cutting-edge technologies, and practical tips to enhance your projects and boost your skills.
         </p>
       </PageIntro>
 
       <Container className='mt-24 sm:mt-32 lg:mt-40'>
         <div className='space-y-24 lg:space-y-32'>
-          {articles.map(article => (
+          {/* {articles.map(article => (
             <FadeIn key={article.href}>
               <article>
                 <Border className='pt-16'>
@@ -79,7 +78,11 @@ export default async function Blog() {
                 </Border>
               </article>
             </FadeIn>
-          ))}
+          ))} */}
+          <FadeIn>
+
+          <h2 className='mt-4 font-display text-2xl font-semibold text-neutral-950'>No blogs yet...</h2>
+          </FadeIn>
         </div>
       </Container>
 

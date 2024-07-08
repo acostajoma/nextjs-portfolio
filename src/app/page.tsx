@@ -9,24 +9,42 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
+import html from '@/images/stack/html/logo-light.svg'
+import css from '@/images/stack/css/logo-light.svg'
+import javascript from '@/images/stack/javascript/logo-light.svg'
+import typescript from '@/images/stack/typescript/logo-light.svg'
+import sql from '@/images/stack/sql/logo-light.svg'
 import svelte from '@/images/stack/svelte/logo-light.svg'
 import react from '@/images/stack/react/logo-light.svg'
 import mongodb from '@/images/stack/mongodb/logo-light.svg'
 import tailwind from '@/images/stack/tailwind/logo-light.svg'
+import prisma from '@/images/stack/prisma/logo-light.svg'
 import aws from '@/images/stack/aws/logo-light.svg'
 import cloudflare from '@/images/stack/cloudflare/logo-light.svg'
+import supabase from '@/images/stack/supabase/logo-light.svg'
+import sass from '@/images/stack/sass/logo-light.svg'
+import jest from '@/images/stack/jest/logo-light.svg'
+import pen from '@/images/other/pen/logo-dark.svg'
 import { loadCaseStudies, type CaseStudy, type MDXEntry } from '@/lib/mdx'
 
 const clients = [
+  ['HTML', html],
+  ['CSS', css],
+  ['Javascript', javascript],
+  ['Typescript', typescript],
+  ['SQL', sql],
+  ['SASS', sass],
   ['Svelte', svelte],
+  ['SvelteKit', svelte],
   ['React', react],
+  ['Jest', jest],
   ['Mongo DB', mongodb],
   ['Tailwind', tailwind],
+  ['Prisma', prisma],
   ['AWS', aws],
   ['Cloudflare', cloudflare],
+  ['Supabase', supabase],
 ]
 
 function Clients() {
@@ -76,9 +94,9 @@ function CaseStudies({
       >
         <p>
           Dive into my portfolio to see how I transform ideas into engaging web
-          solutions. Each project highlights my expertise in design,
-          development, and technology, showcasing my dedication to delivering
-          digital experiences. Explore the work that defines my passion.
+          solutions. Each project highlights my expertise in development, and
+          technology, showcasing my dedication to delivering digital
+          experiences. Explore the work that defines my passion.
         </p>
       </SectionIntro>
       <Container className='mt-16'>
@@ -107,7 +125,7 @@ function CaseStudies({
                   <span className='text-neutral-300' aria-hidden='true'>
                     /
                   </span>
-                  <span>Case study</span>
+                  <span>Projects</span>
                 </p>
                 <p className='mt-6 font-display text-2xl font-semibold text-neutral-950'>
                   {caseStudy.title}
@@ -129,12 +147,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow='Services'
-        title='I help you identify, explore and respond to new opportunities.'
+        title='I help you identify, explore, and respond to new opportunities.'
         className='mt-24 sm:mt-32 lg:mt-40'
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          As a dedicated web developer, I offer a range of services designed to enhance your online presence and ensure your website performs optimally.
         </p>
       </SectionIntro>
       <Container className='mt-16'>
@@ -149,24 +166,20 @@ function Services() {
             </FadeIn>
           </div>
           <List className='mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4'>
-            <ListItem title='Web development'>
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title='Custom Website Development'>
+              Specializing in crafting custom websites tailored to your business needs, ensuring a unique and engaging online presence.
             </ListItem>
-            <ListItem title='Application development'>
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title='Performance Optimization'>
+              Expert in optimizing website performance to ensure fast load times and a seamless user experience, enhancing both usability and SEO.
             </ListItem>
-            <ListItem title='E-commerce'>
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title='Maintenance and Support'>
+              Providing ongoing maintenance and support to keep your website up-to-date, secure, and running smoothly at all times.
             </ListItem>
-            <ListItem title='Custom content management'>
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title='Hosting and Deployment'>
+              Offering reliable hosting and deployment services to ensure your website is always available and performs well under varying traffic loads.
+            </ListItem>
+            <ListItem title='Training and Consultation'>
+              Providing training and consultation services to empower you and your team with the knowledge and skills needed to manage and grow your online presence effectively.
             </ListItem>
           </List>
         </div>
@@ -174,6 +187,7 @@ function Services() {
     </>
   )
 }
+
 
 export const metadata: Metadata = {
   description:
@@ -205,11 +219,9 @@ export default async function Home() {
 
       <Testimonial
         className='mt-24 sm:mt-32 lg:mt-40'
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Steve Jobs', logo:  pen}}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        The only way to do great work is to love what you do.
       </Testimonial>
 
       <Services />

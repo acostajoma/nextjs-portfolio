@@ -44,7 +44,7 @@ function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://www.linkedin.com/in/josem-acosta/', icon: LinkedinIcon },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/josem-acosta/', icon: LinkedinIcon },
   { title: 'Instagram', href: 'https://www.instagram.com/macosta.dev/', icon: InstagramIcon },
   { title: 'GitHub', href: 'https://github.com/acostajoma', icon: GitHubIcon },
 ]

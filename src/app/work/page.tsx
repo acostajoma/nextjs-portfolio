@@ -15,6 +15,7 @@ import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import firstPortfolio from '@/images/portfolio/first/portfolio-image.webp'
 import secondPortfolio from '@/images/portfolio/second/portfolio-image.webp'
 import thirdPortfolio from '@/images/portfolio/third/portfolio-image.webp'
+import openGraphImage from '@/images/home-image.jpg'
 
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 
@@ -143,6 +144,10 @@ export const metadata: Metadata = {
   title: 'My Work',
   description:
     'I believe in creating efficient and innovative web solutions that deliver maximum value to my clients.',
+  openGraph: {
+    title: "Jose Martin's projects - macosta.dev",
+    images: {url: openGraphImage.src}  
+  }
 }
 
 export default async function Work() {

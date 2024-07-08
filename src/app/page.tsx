@@ -27,6 +27,8 @@ import sass from '@/images/stack/sass/logo-light.svg'
 import jest from '@/images/stack/jest/logo-light.svg'
 import pen from '@/images/other/pen/logo-dark.svg'
 import { loadCaseStudies, type CaseStudy, type MDXEntry } from '@/lib/mdx'
+import openGraphImage from '@/images/home-image.jpg'
+
 
 const clients = [
   ['HTML', html],
@@ -190,8 +192,26 @@ function Services() {
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://macosta.dev"),
   description:
     'I create innovative web solutions blending design and technology. Specializing in Svelte and React. I aim to deliver seamless and efficient digital experiences',
+    openGraph: {
+      title: "Jose Martin's portfolio - macosta.dev",
+      images: {url: openGraphImage.src}, 
+      description: 'I create innovative web solutions blending design and technology. Specializing in Svelte and React. I aim to deliver seamless and efficient digital experiences',
+      url: "https://macosta.dev",
+      siteName: "macosta.dev",
+      type: "website",
+      locale: "en_US"
+    },
+    keywords: 'software, web, web development, svelte, react, sveltekit, digital',
+    robots: {
+      follow: true,
+      index: true,
+    },
+    alternates:{
+      canonical : "/"
+    }
 }
 
 export default async function Home() {
